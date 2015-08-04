@@ -1,0 +1,28 @@
+{
+  "name": "express-feedback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NoahYarian/express-feedback"
+  },
+  "author": "Noah Yarian <Noah.Yarian@Gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NoahYarian/express-feedback/issues"
+  },
+  "homepage": "https://github.com/NoahYarian/express-feedback",
+  "dependencies": {
+    "body-parser": "^1.13.3",
+    "ejs": "^2.3.3",
+    "express": "^4.13.3",
+    "less-middleware": "^2.0.1",
+    "loggly": "^1.0.8",
+    "morgan": "^1.6.1",
+    "nodemailer": "^1.4.0"
+  }
+}
