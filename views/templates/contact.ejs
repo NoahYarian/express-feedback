@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= title %> | Contact</title>
+    <link rel='stylesheet' href='/stylesheets/main.css'>
+  </head>
+  <body>
+    <h1>Contact Noah</h1>
+    <form action='contact/submit' method='post'>
+      Name: <input name='name' placeholder='Sharon Fyles'>
+      Email: <input name='email' placeholder='Sharon.Fyles@Gmail.com'>
+      Regarding: <select name='about'>
+        <option value='general'>General Inquiry</option>
+        <option value='employment'>Employment</option>
+        <option value='project'>Project</option>
+        <option value='appidea'>App Idea</option>
+      </select>
+      <input name='content'>
+      <input type='submit'>
+    </form>
+  </body>
+</html>
