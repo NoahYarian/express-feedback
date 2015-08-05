@@ -7,6 +7,8 @@ var lessCSS = require('less-middleware');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 
+require('./lib/secrets');
+
 var routes = require('./routes/routes');
 var contact = require('./routes/contact');
 
