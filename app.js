@@ -5,10 +5,10 @@ var fs = require('fs');
 var morgan = require('morgan');
 var lessCSS = require('less-middleware');
 var bodyParser = require('body-parser');
+var nodemailer = require('nodemailer');
 
 var routes = require('./routes/routes');
-var feedback = require('./routes/feedback');
-var thanks = require('./routes/thanks');
+var contact = require('./routes/contact');
 
 app.set('view engine', 'ejs');
 app.locals.title = 'Noah Yarian';
@@ -35,7 +35,6 @@ app.use(function (req, res, next) {
 // routes
 app.use('/', routes);
 app.use('/contact', contact);
-app.use('/thanks', thanks);
 
 app.use(function (req, res) {
   // 400s before 500s
@@ -46,7 +45,7 @@ app.use(function (req, res) {
 app.use(function (err, req, res, next) {
   // 500s after 400s
   console.log('err.stack: ', err.stack);
-  res.status(500).send("Whoops! Looks like there's a problem on my end.");
+  res.status(500).send("Whoops! Looks like there's a problem on my end. That's bad advertising!");
 
   var client = require('./lib/loggly.js')('error');
   client.log({
